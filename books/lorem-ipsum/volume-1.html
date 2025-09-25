@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monogatari Mokuji =|M|=^</title>
+  <link href="../../assets/css/style.css?v=1.0.1" rel="stylesheet">
+  <link rel="icon" href="../../assets/images/favicon.png" type="image/png" sizes="32x32">
+</head>
+<body>
+  <section id="steps-1893">
+    <div class="cs-container">
+      <div class="cs-image-group">
+        <!-- Placeholder for external image group template -->
+        <div id="cs-image-group-placeholder"></div>
+      </div>
+      <div class="cs-wrapper">
+        <!-- Placeholder for external content template -->
+        <div id="cs-content-placeholder"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Placeholder for external footer template -->
+  <div id="footer-placeholder"></div>
+  <!-- Scroll to Top Button -->
+<!-- Back to Top Button -->
+<button id="top-btn" title="Go to top"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script>
+const topBtn = document.getElementById("top-btn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+});
+
+topBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+	
+	
+  <!-- Load external templates -->
+  <script>
+    fetch("../../templates/images-dup.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("cs-image-group-placeholder").innerHTML = html;
+      })
+      .catch(err => console.error("Failed to load images.html:", err));
+
+		fetch("volume-1-content.html")
+			.then(res => res.text())
+			.then(html => {
+				document.getElementById("cs-content-placeholder").innerHTML = html;
+
+				// Force style
+				const title = document.querySelector("#cs-content-placeholder h2.cs-title");
+				if (title) title.style.marginBottom = "30px";
+			})
+			.catch(err => console.error("Failed to load content.html:", err));
+
+    fetch("../../templates/footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("footer-placeholder").innerHTML = html;
+      })
+      .catch(err => console.error("Failed to load footer.html:", err));
+  </script>
+</body>
+</html>
+<!--
+  Project: Monogatari Mokuji
+  Templates modified from CodeStitch (https://codestitch.app).
+  CodeStitch grants a broad commercial license for personal and client projects.
+  Redistribution of the original templates without modification is prohibited.
+  
+  Images sourced from Pexels (https://www.pexels.com/) and are free for personal and commercial use.
+  Icons sourced from Flaticon (https://www.flaticon.com/) and used according to their Free License.
+  
+  For full CodeStitch terms, visit: https://codestitch.app/terms-of-service
+-->

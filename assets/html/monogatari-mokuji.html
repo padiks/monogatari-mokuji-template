@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monogatari Mokuji</title>
+  <link href="assets/css/style.css?v=1.0.1" rel="stylesheet">
+  <script>
+    const svg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect x="10" y="10" width="30" height="30" fill="#1e90ff"/>
+  <rect x="60" y="10" width="30" height="30" fill="#ff6347"/>
+  <circle cx="50" cy="70" r="20" fill="#32cd32"/>
+</svg>`;
+    const svgBlob = new Blob([svg], {type: 'image/svg+xml'});
+    const url = URL.createObjectURL(svgBlob);
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.href = url;
+    document.head.appendChild(link);
+  </script>
+  <script>
+    // Automatically prefix CSS and images with BASE_PATH
+    const prefixAssets = (selector, attr='src') => {
+      document.querySelectorAll(selector).forEach(el => {
+        const path = el.getAttribute(attr);
+        if (path && !path.startsWith('/') && !path.startsWith('http')) {
+          el.setAttribute(attr, `${BASE_PATH}/${path}`);
+        }
+      });
+    };
+    // Fix CSS link(s)
+    prefixAssets('link[rel="stylesheet"]', 'href');
+    // Fix images in <body>
+    prefixAssets('img', 'src');
+    prefixAssets('source', 'srcset'); // for <picture>
+  </script>
+</head>
+<body>
+  <section id="steps-1893">
+    <div class="cs-container">
+      <div class="cs-image-group">
+        <picture class="cs-picture">
+          <source media="(max-width: 600px)" srcset="assets/images/pexels-eugenia-remark-5767088-33696811.jpg" />
+          <source media="(min-width: 601px)" srcset="assets/images/pexels-eugenia-remark-5767088-33696811.jpg" />
+          <img loading="lazy" decoding="async" 
+            src="assets/images/pexels-eugenia-remark-5767088-33696811.jpg" 
+            alt="My Local Image" width="324" height="467" />
+        </picture>
+        <img class="cs-graphic cs-brown" loading="lazy" decoding="async" 
+          src="assets/images/brown-lines2.svg" alt="graphic" width="100" height="98" aria-hidden="true" />
+        <img class="cs-graphic cs-peach" loading="lazy" decoding="async" 
+          src="assets/images/peach-blob.svg" alt="graphic" width="42" height="31" aria-hidden="true" />
+        <img class="cs-graphic cs-leaf" loading="lazy" decoding="async" 
+          src="assets/images/leaf-reverse.svg" alt="graphic" width="136" height="171" aria-hidden="true" />
+        <img class="cs-graphic cs-dots" loading="lazy" decoding="async" 
+          src="assets/images/beige-dots.svg" alt="graphic" width="159" height="88" aria-hidden="true" />
+        <img class="cs-graphic cs-lines" loading="lazy" decoding="async" 
+          src="assets/images/mesh-reverse.svg" alt="graphic" width="150" height="165" aria-hidden="true" />
+      </div>
+      <div class="cs-wrapper">
+        <div class="cs-content">
+          <span class="cs-topper">
+            &nbsp;
+          </span>
+          <h2 class="cs-title">Monogatari Mokuji</h2>
+        </div>
+        <ul class="cs-card-group">
+          <li class="cs-item">
+            <span class="cs-number">00</span>
+            <div class="cs-flex">
+              <h3 class="cs-h3">Raito Noberu Toshokan</h3>
+              <p>
+                <span class="tooltip" data-tooltip="Explore the worlds of imagination and adventure through these tales. Each story invites you to travel beyond the ordinary, meet unforgettable characters, and experience journeys that stay with you long after the last page is turned.">
+                  <span class="first-word">Tanken</span>
+                </span> 
+                suru sekai wa souzou to bouken de afurete iru monogatari no naka ni. Sorezore no monogatari ga, futsuu o koete tabi o shi, wasurerarenai kyarakutaa ni deai, saigo no peeji o yonda nochi mo kokoro ni nokoru bouken o keiken saseru.
+              </p>
+              <ul>
+                <li><a href="books/isekai-mokushiroku/">Isekai Mokushiroku Mainog&umacr;ra</a></li>
+                <li><a href="books/rogo-no-kinka/">R&omacr;go ni Sonaete Isekai de 8-Man-Mai no Kinka o Tamemasu</a></li>
+                <li><a href="books/kotei-deshita/">Tensei Shitara K&omacr;tei Deshita</a></li>
+              </ul>	
+              <hr>
+              <blockquote>
+                <p>(Hyakubun wa ikken ni shikazu) - &#34;Hearing something a hundred times is not as good as seeing it once.&#34; Experiencing the words yourself is far more powerful than only hearing about it.</p>
+              </blockquote>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    &copy; 2025 Monogatari Mokuji. Template downloaded from 
+    <a href="https://codestitch.app/app" target="_blank" rel="noopener noreferrer">CodeStitch</a> and modified for our use. Images sourced from 
+    <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Pexels</a>.
+  </footer>
+</body>
+</html>
+<!--
+  This project uses HTML templates from CodeStitch (https://codestitch.app).
+  CodeStitch grants a broad commercial license for personal and client projects.
+  Redistribution or sublicensing of their templates is prohibited without permission.
+  For full terms, visit https://codestitch.app/terms-of-service.
+-->
