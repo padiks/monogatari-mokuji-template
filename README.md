@@ -35,7 +35,8 @@ The template is ideal for building a book reader web app, online story showcase,
 
 ## File Structure
 
-monogatari/
+```
+monogatari-mokuji-template/
 ├── index.html                     # Main page
 ├── content.html                   # Main content template
 ├── assets/
@@ -54,7 +55,10 @@ monogatari/
 │   │   └── volume-1-content.html  # Volume content
 │   └── another-book/
 │       └── ...                    # Additional books
-└── README.md                      # This file
+├── README.md                      # Project overview
+└── LICENSE                        # MIT License file
+```
+
 
 ## License
 
